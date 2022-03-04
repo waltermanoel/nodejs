@@ -13,4 +13,9 @@ INSERT INTO usuarios(nome, email, idade) VALUES(
 SELECT * FROM usuarios WHERE idade = 17;
                                    >
                                    <
-                                   
+
+
+DELETE FROM usuarios WHERE nome = "Lucas";
+
+UPDATE usuarios SET nome = "Pedro Ferarie" WHERE nome = "Pedro Soares";
+        
