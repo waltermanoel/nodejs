@@ -18,10 +18,15 @@ const sequelize = new Sequelize("teste", "root", "mogno", {
         const hbs = handlebars.create({
             defaultLayout: "main"
         })
-        app.engine("handlebars", function(){hbs})
-        app.set("view engine", "handlebars")
+        app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}));
+        app.set('view engine', 'handlebars');
+
 
 // Rotas
+
+    app.get("/", function(req, res){
+        res.send("oi")
+    })
 
     app.get("/cad", function(req, res){
         res.render("formulario")
